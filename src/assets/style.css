@@ -10,12 +10,14 @@
 .loading {
     color: rgb(226, 226, 27);
     font-size: 40px;
+    max-width: 100%;
 }
 .center-div {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
+    max-width: 100%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -26,6 +28,7 @@
     -ms-transform: translate(-50%, 20%);
     transform: translate(-50%, 20%);
     font-family: 'Bell MT';
+    max-width: 100%;
 }
 .center {
     position: absolute;
@@ -94,8 +97,8 @@
     display: flex;
     place-items: center;
     place-content: center;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     top: 0;
     left:0;
     z-index: 1;
@@ -123,6 +126,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    max-width: 100%;
     -ms-transform: translate(-50%, 5%);
     transform: translate(-50%, 5%);
 }
@@ -140,4 +144,11 @@
     font-size: 25px;
     font-family: 'Agency FB';
     font-weight: bolder;
+}
+.max-width {
+    max-width: 100%;
+}
+.hm-rt {
+    font-size: 5vw;
+    margin-top: 35%;
 }
