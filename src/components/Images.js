@@ -10,7 +10,6 @@ export default function Images() {
     const [searchTerm, setsearchTerm] = useState('');
     const [page, setpage] = useState(1)
     const [images, setimages, isLoading, error] = useFetchImage(searchTerm, page);
-    const [showPreview, setshowPreview] = useState(false);
 
     function handleRemove(index){
         setimages(images.filter((img, i)=> i !== index))
@@ -35,8 +34,7 @@ export default function Images() {
                         </div>
                     ) : null
                 }
-                <div>
-                    <AnimateSharedLayout type='switch'>
+                    <AnimateSharedLayout>
                     <InfiniteScroll
                     dataLength={images.length}
                     next={()=>setpage(page + 1)}
@@ -46,10 +44,8 @@ export default function Images() {
                     {images.map((img, index)=>(
                             <motion.section 
                                 key={index}
-                                layoutId={img.urls.regular}
                             >
                                 <Image
-                                    show={()=>setshowPreview(img.urls.regular)}
                                     image={img.urls.regular}
                                     index={index}
                                     handleRemove={handleRemove}
@@ -57,20 +53,7 @@ export default function Images() {
                             </motion.section>
                     ))}
                 </InfiniteScroll>
-
-                <AnimatePresence>
-                    {
-                        showPreview && (
-                            <motion.section layoutId={showPreview} exit={{opacity:0, rotate:360, transition:{duration:1}}} className='img-abs' onClick={()=>setshowPreview(false)}>
-                                <div>
-                                <img src={showPreview} width='400px' height='auto'/>
-                                </div>
-                            </motion.section>
-                        )
-                    }
-                    </AnimatePresence>
                 </AnimateSharedLayout>
-                </div>
                 {isLoading && <Loading />}
             </section>
     )

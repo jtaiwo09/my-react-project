@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types';
 import useTFClassify from '../utils/hooks/useTFClassify';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Image({image, index, handleRemove, show}) {
     const [isHovering, setisHovering] = useState(false);
+    const [showPreview, setshowPreview] = useState(false);
     const {predict, predictions, setpredictions, isLoading} = useTFClassify();
     const imageRef = useRef();
 
@@ -13,7 +15,7 @@ function Image({image, index, handleRemove, show}) {
                 onMouseEnter={()=>setisHovering(true)}
                 onMouseLeave={()=>setisHovering(false)}
             >
-                <div className='rel d-flex'>
+                <div className='img-rel'>
                     {
                         (predictions.length > 0 || isLoading) && (
                                 <small onClick={()=>{setpredictions([])}} className='result'>
@@ -38,8 +40,17 @@ function Image({image, index, handleRemove, show}) {
                         className={`abs ${isHovering ? 'fas fa-times onEnter':'fas fa-times onLeave'}`}
                     ></i>
                 </div>
-                <img crossOrigin='anonymous' ref={imageRef} src={image} width='200px' height='auto' onClick={show}/>
+                <img crossOrigin='anonymous' ref={imageRef} src={image} width='200px' height='auto' onClick={()=>setshowPreview(true)}/>
             </div>
+                {
+                    showPreview && (
+                        <section className='img-ab'>
+                            <div className='bg-white' onClick={()=>setshowPreview(false)}>
+                            <img src={image} width='400px' height='auto'/>
+                            </div>
+                        </section>
+                    )
+                }
         </div>
     )
 }

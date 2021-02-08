@@ -3,12 +3,11 @@ import axios from 'axios';
 
 export default function useFetchImage(searchTerm, page) {
     const [images, setimages] = useState([]);
-    const [isLoading, setisLoading] = useState(false);
+    const [isLoading, setisLoading] = useState(true);
     const [error, seterror] = useState([]);
     
     const key = process.env.REACT_APP_UNSPLASH_KEY
     const api = process.env.REACT_APP_UNSPLASH_API
-    const [search, setsearch] = useState(true);
 
     function fetch(){
         const url = searchTerm === '' ? 'photos?':`search/photos?query=${searchTerm}&`;
