@@ -46,7 +46,7 @@ function Image({image, index, handleRemove, show}) {
                     showPreview && (
                         <section className='img-ab'>
                             <div className='bg-white' onClick={()=>setshowPreview(false)}>
-                            <img src={image} width='400px' height='auto'/>
+                            <img src={image} width='350px' height='auto'/>
                             </div>
                         </section>
                     )
