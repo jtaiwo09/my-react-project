@@ -16,7 +16,7 @@ export default function Header() {
           });
     }
     return (
-        <Navbar bg="dark" variant="dark" expand="lg" sticky='top' className='p-3'>
+        <Navbar bg="dark" variant="dark" expand="lg" sticky='top' className='p-3 max-width'>
         <Navbar.Brand className='brand' href="/">Citi Gallery</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

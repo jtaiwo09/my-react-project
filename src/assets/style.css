@@ -81,7 +81,8 @@
     font-family: cursive;
 }
 .login-div {
-    width: 350px;
+    width: 310px;
+    height: auto;
 }
 .active-link {
     text-decoration: underline;
@@ -124,12 +125,12 @@
     text-decoration: none;
     color: white;
     margin-right: 15px;
-    font-size: 18px;
+    font-size: 16px;
 }
 .nav:hover {
     color: rgb(128, 182, 243);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
     font-family: cursive;
 }
 .active-nav {
@@ -166,4 +167,7 @@
 .hm-rt {
     font-size: 5vw;
     margin-top: 35%;
+}
+.main {
+    max-width: 100%;
 }
