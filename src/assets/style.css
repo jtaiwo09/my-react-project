@@ -1,0 +1,133 @@
+.img-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img { 
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+.loading {
+    color: rgb(226, 226, 27);
+    font-size: 40px;
+}
+.center-div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.center-log {
+    position: absolute;
+    left: 500px;
+    top: 100px;
+}
+.center {
+    position: absolute;
+    left: 520px;
+    top: 220px;
+}
+.rel {
+    position:relative;
+}
+.abs {
+    position:absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    background-color: white;
+    padding: 1px 3px;
+    opacity: 0.6;
+}
+.abs-search {
+    position:absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    background-color: white;
+    padding: 1px 3px;
+    opacity: 0.6;
+}
+.abs-search:hover {
+    background-color: red;
+    color: white;
+    opacity: 1;
+}
+.abs:hover {
+    background-color: red;
+    color: white;
+    opacity: 1;
+}
+.onLeave {
+    display: none;
+}
+.onEnter {
+    display: block
+}
+.load-error {
+    color: red;
+    font-size: 18px;
+    font-family: cursive;
+}
+.search-input {
+    font-family: cursive;
+}
+.login-div {
+    width: 350px;
+}
+.active-link {
+    text-decoration: underline;
+    color: rgb(48, 212, 48);
+}
+.img-rel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.img-abs {
+    position: fixed;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    z-index: 1;
+
+}
+
+.nav {
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.nav:hover {
+    color: rgb(128, 182, 243);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: cursive;
+}
+.active-nav {
+    color: rgb(52, 231, 52);
+    text-decoration: underline;
+}
+.tensorflow {
+    position: absolute;
+    left: 520px;
+    top: 2px;
+    text-align: center;
+}
+.result {
+    position: absolute;
+    top: 0;
+    left: 22px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: small;
+}
