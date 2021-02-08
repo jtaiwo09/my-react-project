@@ -79,6 +79,11 @@ export default function App() {
                   
                 })//map ends
             }
+               <Route
+                  path='*'
+                >
+                  <NotFound></NotFound>
+                </Route>
       </Switch>
       </AnimatePresence>
       </AppContext.Provider>

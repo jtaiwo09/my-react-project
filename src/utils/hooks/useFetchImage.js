@@ -3,11 +3,12 @@ import axios from 'axios';
 
 export default function useFetchImage(searchTerm, page) {
     const [images, setimages] = useState([]);
-    const [isLoading, setisLoading] = useState(true);
+    const [isLoading, setisLoading] = useState(false);
     const [error, seterror] = useState([]);
     
     const key = process.env.REACT_APP_UNSPLASH_KEY
     const api = process.env.REACT_APP_UNSPLASH_API
+    const [search, setsearch] = useState(true);
 
     function fetch(){
         const url = searchTerm === '' ? 'photos?':`search/photos?query=${searchTerm}&`;
@@ -29,9 +30,9 @@ export default function useFetchImage(searchTerm, page) {
 
     function fetchSearch(res) {
         if(page > 1){
-            setimages([...images, ...res.data.results])
+            setimages([...images, ...res.data.results]);
         } else {
-            setimages([...res.data.results])
+            setimages([...res.data.results]);
         }
     }
     function fetchRandom(res) {

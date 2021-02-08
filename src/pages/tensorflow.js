@@ -3,7 +3,7 @@ import useTFClassify from '../utils/hooks/useTFClassify';
 
 export default function Tensorflow() {
     const imageRef = useRef();
-    const [predict, predictions, isLoading] = useTFClassify();
+    const {predict, predictions, isLoading} = useTFClassify();
     
     return (
         <div className='rel'>
@@ -26,7 +26,7 @@ export default function Tensorflow() {
                         </div>
                     )
                 }
-                <button className='btn btn-dark btn-block mt-2' onClick={()=>predict(imageRef.current)}>
+                <button className='btn btn-dark btn-block mt-3' onClick={()=>predict(imageRef.current)}>
                     {
                         isLoading ? '⌛' : 'Predict'
                     }

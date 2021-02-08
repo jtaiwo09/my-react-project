@@ -4,7 +4,7 @@ import useTFClassify from '../utils/hooks/useTFClassify';
 
 function Image({image, index, handleRemove, show}) {
     const [isHovering, setisHovering] = useState(false);
-    const [predict, predictions, setpredictions, isLoading] = useTFClassify();
+    const {predict, predictions, setpredictions, isLoading} = useTFClassify();
     const imageRef = useRef();
 
     return (
@@ -17,7 +17,7 @@ function Image({image, index, handleRemove, show}) {
                     {
                         (predictions.length > 0 || isLoading) && (
                                 <small onClick={()=>{setpredictions([])}} className='result'>
-                                    {isLoading && <small>Fetching result...</small>}
+                                    {isLoading && <span>Fetching result...</span>}
                                 {
                                     predictions.map((prediction, index)=> (
                                         <div className='d-flex justify-content-between mx-2'>

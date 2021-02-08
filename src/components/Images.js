@@ -29,9 +29,11 @@ export default function Images() {
                     </div>
                 }
                 {
-                    <div className='center-div'>
-                        <p className='load-error'>{error[0]}</p>
-                    </div>
+                    error.length > 0 ? (
+                        <div className='center-log'>
+                            <p className='load-error'>{error}</p>
+                        </div>
+                    ) : null
                 }
                 <div>
                     <AnimateSharedLayout type='switch'>

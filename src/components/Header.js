@@ -17,7 +17,7 @@ export default function Header() {
     }
     return (
         <Navbar bg="dark" variant="dark" expand="lg" sticky='top' className='p-3'>
-        <Navbar.Brand to="/"><img  width='60px' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghAumipatP3cic_cghRjNn2RQ0kka3-Aosg&usqp=CAU' /></Navbar.Brand>
+        <Navbar.Brand className='brand' href="/">City Gallery</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
