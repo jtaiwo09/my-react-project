@@ -10,7 +10,7 @@ export default function Tensorflow() {
             <div class='tensorflow'>
                 <h3>Tensorflow Example</h3>
                 <div className=''>
-                    <img crossOrigin='anonymous' ref={imageRef} width='400px' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWgay25OFqq2HzjJbyHODWl9bnMSfzoP_3lQ&usqp=CAU' alt='' />
+                    <img crossOrigin='anonymous' ref={imageRef} width='300px' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWgay25OFqq2HzjJbyHODWl9bnMSfzoP_3lQ&usqp=CAU' alt='' />
                 </div>
                 {
                     predictions.length > 0 && (
