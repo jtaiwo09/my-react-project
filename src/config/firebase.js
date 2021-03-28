@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 
 var firebaseConfig = {
-    apiKey: "AIzaSyAY5uGL678RZlN8W3v7FhrQ4XoFpiu7hSA",
-    authDomain: "new-react-fc1e8.firebaseapp.com",
-    projectId: "new-react-fc1e8",
-    storageBucket: "new-react-fc1e8.appspot.com",
-    messagingSenderId: "695814008177",
-    appId: "1:695814008177:web:7c26bc8892c49c0e8ddad0"
+      apiKey: "AIzaSyBi3lCMkKgg1t31_Wd2P9zbmqDC-erC1IA",
+      authDomain: "citi-gallery.firebaseapp.com",
+      projectId: "citi-gallery",
+      storageBucket: "citi-gallery.appspot.com",
+      messagingSenderId: "101301226121",
+      appId: "1:101301226121:web:6206220a6b1872c461d458"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
